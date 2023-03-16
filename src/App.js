@@ -65,5 +65,5 @@ export default function App() {
 }
 
 export function Env() {
-  return <Environment preset={"lobby"} background blur={1} />;
+  return <Environment preset={"dawn"} background blur={1} />;
 }

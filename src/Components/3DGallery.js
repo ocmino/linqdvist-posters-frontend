@@ -164,7 +164,7 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
     );
     easing.dampC(
       frame.current.material.color,
-      hovered ? "orange" : "white",
+      hovered ? "white" : "white",
       0.1,
       dt
     );
