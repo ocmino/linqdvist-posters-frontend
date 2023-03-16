@@ -40,7 +40,7 @@ export default function Categories() {
   return (
     <div>
       <div style={{ ...styleAbout, color }}>
-        <h1>Categories</h1>
+        <h1>Kategorier</h1>
       </div>
 
       <div style={{ ...styleCategories, color }}>

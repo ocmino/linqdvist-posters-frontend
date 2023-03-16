@@ -47,7 +47,7 @@ export const Gallery = () => (
     <Canvas dpr={[1, 1.5]} camera={{ fov: 70, position: [0, 2, 15] }}>
       <Frames images={images} />
     </Canvas>
-    <div style={textStyleVisible ? textStyleVisible : textStyleHidden}>
+    <div style={textStyleVisible}>
       <h1>Välkommen till det virtuella galleriet!</h1>
       <p>
         Ett smidigt och sätt att få en känsla för hur en bild ser ut i verkligheten.

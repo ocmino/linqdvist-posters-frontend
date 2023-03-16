@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <div>
       <div style={{ ...styleContact, color }}>
-        <h1>Contact</h1>
+        <h1>Kontakta oss</h1>
       </div>
       <div style={{ ...styleTextDiv, color }}>
         

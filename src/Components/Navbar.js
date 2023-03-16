@@ -26,7 +26,7 @@ export default function Navbar() {
           fontWeight: "bold",
         }}
       >
-        Home
+        Hem
       </Link>
 
       <Link
@@ -38,7 +38,7 @@ export default function Navbar() {
           fontWeight: "bold",
         }}
       >
-        About
+        Om oss
       </Link>
       <Link to="/categories"
       style={{
@@ -47,7 +47,7 @@ export default function Navbar() {
         fontSize: "1rem",
         fontWeight: "bold",
       }}
-      >Categories</Link>
+      >Kategorier</Link>
       <Link to="/gallery"
       style={{
         color: "black",
@@ -55,7 +55,7 @@ export default function Navbar() {
         fontSize: "1rem",
         fontWeight: "bold",
       }}
-      >Gallery</Link>
+      >Virtuellt galleri</Link>
       <Link
         to="/contact"
         style={{
@@ -65,7 +65,7 @@ export default function Navbar() {
           fontWeight: "bold",
         }}
       >
-        Contact
+        Kontakt
       </Link>
     </div>
   );
