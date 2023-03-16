@@ -18,7 +18,7 @@ export default function Categories() {
     position: "absolute",
     display: "flex",
     justifyContent: "space-between",
-    top: "50%",
+    top: "60%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: "white",
@@ -44,14 +44,35 @@ export default function Categories() {
       </div>
 
       <div style={{ ...styleCategories, color }}>
-        <Link>
-            <h1>Category 1</h1>
+        <Link
+          style={{
+            padding: "20px",
+          }}
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
+            alt="Category 1"
+          />
         </Link>
-        <Link>
-            <h1>Category 2</h1>
+        <Link
+          style={{
+            padding: "20px",
+          }}
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_360x.jpg?v=1574715772"
+            alt="Category 2"
+          />
         </Link>
-        <Link>
-            <h1>Category 3</h1>
+        <Link
+          style={{
+            padding: "20px",
+          }}
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/2469/4477/products/iceland-2-1_360x.jpg?v=1520528278"
+            alt="Category 3"
+          />
         </Link>
       </div>
     </div>
