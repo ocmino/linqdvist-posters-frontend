@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@100;200&display=swap');
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
