@@ -7,6 +7,7 @@ import {
   Center,
   Environment,
   OrbitControls,
+  Sky,
 } from "@react-three/drei";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -15,7 +16,7 @@ import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Categories from "./Components/Categories";
-import {Gallery} from "./Components/3DGallery";
+import { Gallery } from "./Components/3DGallery";
 
 export default function App() {
   return (
@@ -43,7 +44,7 @@ export default function App() {
         <Env />
         <OrbitControls
           autoRotate
-          autoRotateSpeed={2}
+          autoRotateSpeed={1}
           enablePan={false}
           enableZoom={false}
           minPolarAngle={Math.PI / 2.1}
@@ -65,5 +66,14 @@ export default function App() {
 }
 
 export function Env() {
-  return <Environment preset={"lobby"} background blur={1} />;
+  return (
+    <Sky
+      background
+      blur={1}
+      resolution={4096}
+      sunPosition={[0, 1, 0]}
+      inclination={0.5}
+      azimuth={0.25}
+    />
+  );
 }

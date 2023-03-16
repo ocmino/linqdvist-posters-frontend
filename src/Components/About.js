@@ -37,7 +37,7 @@ export default function About() {
   return (
     <div>
       <div style={{ ...styleAbout, color }}>
-        <h1>About</h1>
+        <h1>Om oss</h1>
       </div>
 
       <p style={{ ...styleText, color }}>

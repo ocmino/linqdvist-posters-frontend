@@ -26,14 +26,16 @@ export default function Contact() {
   };
 
   const styleTextDiv = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: "white",
     fontSize: "1rem",
-    backgroundColor: "black",
-    opacity: "0.2",
     padding: "20px",
     width: "50%",
     height: "25%",
