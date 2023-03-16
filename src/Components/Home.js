@@ -36,6 +36,14 @@ export default function Home() {
     height: "50%",
   };
 
+  const posters = {
+    position: "absolute",
+    display: "flex",
+    top: "225%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
+
   return (
     <div style={style}>
       <div style={text}>
@@ -46,6 +54,19 @@ export default function Home() {
           inredningsdetaljer och vill stödja nordiska designers har hittat helt
           rätt. Passa på att pryda flera väggar åt gången
         </p>
+      </div>
+
+      <div style={posters}>
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
+          alt="Category 1"
+        />
+
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
+          alt="Category 1"
+        />
+
       </div>
     </div>
   );

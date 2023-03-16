@@ -21,7 +21,7 @@ import { Gallery } from "./Components/3DGallery";
 export default function App() {
   return (
     <div className="App">
-      <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
+      <Canvas shadows camera={{ position: [0, 0, 0], fov: 50 }}>
         <group position={[0, -0.65, 0]}>
           <AccumulativeShadows
             temporal
