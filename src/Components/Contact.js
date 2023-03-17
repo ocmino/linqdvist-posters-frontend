@@ -38,13 +38,13 @@ export default function Contact() {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "100%",
-  }
+  };
 
   const styleLabel = {
     marginBottom: "5px",
     fontSize: "1rem",
     fontWeight: "bold",
-  }
+  };
 
   const styleInput = {
     width: "100%",
@@ -53,7 +53,7 @@ export default function Contact() {
     border: "1px solid #ccc",
     marginBottom: "15px",
     fontSize: "1rem",
-  }
+  };
 
   const styleButton = {
     position: "relative",
@@ -63,11 +63,11 @@ export default function Contact() {
     borderRadius: "5px",
     border: "none",
     background: "black",
-    color: "black",
+    color: "white",
     fontWeight: "bold",
     cursor: "pointer",
     fontSize: "1rem",
-  }
+  };
 
   // Color state and interval timer to update the color
   const [color, setColor] = useState("black");
@@ -86,12 +86,29 @@ export default function Contact() {
       <div style={{ ...styleFormContainer }}>
         <form style={{ ...styleForm }}>
           <label style={{ ...styleLabel }}>Namn</label>
-          <input style={{ ...styleInput }} type="text" name="name" placeholder="Ange ditt namn" required/>
+          <input
+            style={{ ...styleInput }}
+            type="text"
+            name="name"
+            placeholder="Ange ditt namn"
+            required
+          />
           <label style={{ ...styleLabel }}>E-post</label>
-          <input style={{ ...styleInput }} type="email" name="email" placeholder="Ange din e-postadress" required/>
+          <input
+            style={{ ...styleInput }}
+            type="email"
+            name="email"
+            placeholder="Ange din e-postadress"
+            required
+          />
           <label style={{ ...styleLabel }}>Meddelande</label>
-          <textarea style={{ ...styleInput, height: "150px" }} name="message" placeholder="Skriv ditt meddelande här" required></textarea>
-          <input style={{ ...styleButton }} type="submit" value="Skicka"/>
+          <textarea
+            style={{ ...styleInput, height: "150px" }}
+            name="message"
+            placeholder="Skriv ditt meddelande här"
+            required
+          ></textarea>
+          <input style={{ ...styleButton }} type="submit" value="Skicka" />
         </form>
       </div>
     </div>

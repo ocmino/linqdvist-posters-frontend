@@ -1,5 +1,5 @@
 export default function Home() {
-  const background = "./Pictures/First.png";
+  const background = "./Pictures/HomePage.jpeg";
 
   //background image
   const style = {
@@ -24,22 +24,24 @@ export default function Home() {
 
   const text = {
     position: "absolute",
-    top: "71vh",
-    left: "26%",
+    top: "69vh",
+    left: "33%",
     transform: "translate(-50%, -50%)",
     color: "black",
     fontSize: "1rem",
     fontWeight: "bold",
     transition: "color 2s linear",
     padding: "20px",
-    width: "50%",
+    width: "65%",
     height: "50%",
   };
 
   const posters = {
     position: "absolute",
-    display: "flex",
-    top: "225%",
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gridGap: "50px",
+    top: "275%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
@@ -49,10 +51,14 @@ export default function Home() {
       <div style={text}>
         <h2>Gör ditt hem mer personligt</h2>
         <p>
-          Upptäck vårt stora utbud av vackra och unika posters och prints som du
-          inte hittar någon annanstans. Du som uppskattar att vara ensam om dina
-          inredningsdetaljer och vill stödja nordiska designers har hittat helt
-          rätt. Passa på att pryda flera väggar åt gången
+          Upptäck vårt spännande utbud av vackra och unika posters och prints
+          som du garanterat inte hittar någon annanstans. Du som uppskattar att
+          vara ensam om dina inredningsdetaljer och vill stödja nordiska
+          designers har hittat helt rätt. Passa på att pryda flera väggar åt
+          gången och skapa ett härligt hem fyllt med snygga posters och
+          affischer. I vårt härliga utbud hittar du något för alla väggar i
+          hemmet. Du kan se alla motiv utifrån kategori, teknik eller storlek
+          vilket underlättar att hitta posters i just din stil.
         </p>
       </div>
 
@@ -67,6 +73,28 @@ export default function Home() {
           alt="Category 1"
         />
 
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
+          alt="Category 1"
+        />
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
+          alt="Category 1"
+        />
+
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
+          alt="Category 1"
+        />
+
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
+          alt="Category 1"
+        />
+
+        <div>
+          <h2>Upptäck våra kategorier</h2>
+        </div>
       </div>
     </div>
   );

@@ -49,6 +49,7 @@ export default function App() {
           autoRotateSpeed={0.5}
           enablePan={false}
           enableZoom={false}
+          enableRotate={false}
           minPolarAngle={Math.PI / 2.1}
           maxPolarAngle={Math.PI / 2.1}
         />
@@ -72,7 +73,7 @@ export default function App() {
 function Env() {
 
   return <Environment
-    files="/Pictures/HDR/rustig_koppie_puresky_2k.hdr"
+    files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"
     background
     blur={1}
 
