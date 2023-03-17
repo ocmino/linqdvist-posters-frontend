@@ -6,6 +6,7 @@ import { useCursor, Image, Text } from "@react-three/drei";
 import { useRoute, useLocation } from "wouter";
 import { easing } from "maath";
 import getUuid from "uuid-by-string";
+import { useMediaQuery } from "@mantine/hooks";
 
 const GOLDENRATIO = 1.61803398875;
 

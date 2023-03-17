@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Categories() {
   // Style for the title
@@ -27,6 +28,18 @@ export default function Categories() {
     transition: "color 2s linear",
     padding: "20px",
   };
+
+  // Media query to change the font size
+  const isMobile = useMediaQuery("(max-width: 600px)");
+if (isMobile) {
+  styleAbout.fontSize = "0.7rem";
+  styleAbout.top = "20%";
+  styleCategories.fontSize = "0.7rem";
+  styleCategories.flexDirection = "column";
+  styleCategories.top = "140%";
+}
+
+
 
   // Color state and interval timer to update the color
   const [color, setColor] = useState("black");

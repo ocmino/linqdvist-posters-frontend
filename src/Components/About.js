@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function About() {
   // Style for the title
@@ -24,6 +25,17 @@ export default function About() {
     transition: "color 2s linear",
     padding: "20px",
   };
+
+  // Media query to change the font size
+  const isMobile = useMediaQuery("(max-width: 600px)");
+  if (isMobile) {
+    styleAbout.fontSize = "0.8rem";
+    styleText.fontSize = "0.8rem";
+    styleText.width = "85%";
+    styleText.top = "50%";
+  }
+
+
 
   // Color state and interval timer to update the color
   const [color, setColor] = useState("black");

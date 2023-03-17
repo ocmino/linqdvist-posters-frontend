@@ -13,22 +13,9 @@ export default function Contact() {
     transition: "color 2s linear",
   };
 
-  const styleText = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    color: "white",
-    fontSize: "1rem",
-    fontWeight: "bold",
-    transition: "color 2s linear",
-    padding: "20px"
-  };
-
-  const styleTextDiv = {
+  const styleFormContainer = {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
     alignItems: "center",
     position: "absolute",
     top: "50%",
@@ -37,10 +24,50 @@ export default function Contact() {
     color: "white",
     fontSize: "1rem",
     padding: "20px",
-    width: "50%",
-    height: "25%",
+    width: "60%",
+    height: "50%",
     borderRadius: "10px",
   };
+
+  const styleForm = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "100%",
+  }
+
+  const styleLabel = {
+    marginBottom: "5px",
+    fontSize: "1rem",
+    fontWeight: "bold",
+  }
+
+  const styleInput = {
+    width: "100%",
+    padding: "10px",
+    borderRadius: "5px",
+    border: "1px solid #ccc",
+    marginBottom: "15px",
+    fontSize: "1rem",
+  }
+
+  const styleButton = {
+    position: "relative",
+    width: "25%",
+    top: "50px",
+    padding: "10px",
+    borderRadius: "5px",
+    border: "none",
+    background: "black",
+    color: "white",
+    fontWeight: "bold",
+    cursor: "pointer",
+    fontSize: "1rem",
+  }
 
   // Color state and interval timer to update the color
   const [color, setColor] = useState("black");
@@ -56,27 +83,17 @@ export default function Contact() {
       <div style={{ ...styleContact, color }}>
         <h1>Kontakta oss</h1>
       </div>
-      <div style={{ ...styleTextDiv, color }}>
-        
+      <div style={{ ...styleFormContainer }}>
+        <form style={{ ...styleForm }}>
+          <label style={{ ...styleLabel }}>Namn</label>
+          <input style={{ ...styleInput }} type="text" name="name" placeholder="Ange ditt namn" required/>
+          <label style={{ ...styleLabel }}>E-post</label>
+          <input style={{ ...styleInput }} type="email" name="email" placeholder="Ange din e-postadress" required/>
+          <label style={{ ...styleLabel }}>Meddelande</label>
+          <textarea style={{ ...styleInput, height: "150px" }} name="message" placeholder="Skriv ditt meddelande här" required></textarea>
+          <input style={{ ...styleButton }} type="submit" value="Skicka"/>
+        </form>
       </div>
-      <p style={{ ...styleText, color }}>
-          <form>
-            <label>
-              Name:
-              <input type="text" name="name" />
-            </label>
-            <label>
-              Email:
-              <input type="text" name="email" />
-            </label>
-            <label>
-              Message:
-              <input type="text" name="message" />
-            </label>
-            <input type="submit" value="Submit" />
-
-          </form>
-        </p>
     </div>
   );
 }

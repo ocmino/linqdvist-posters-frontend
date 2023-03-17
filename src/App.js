@@ -17,11 +17,12 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Categories from "./Components/Categories";
 import { Gallery } from "./Components/3DGallery";
+import { Cart } from "./Components/Cart/Cart";
 
 export default function App() {
   return (
     <div className="App">
-      <Canvas shadows camera={{ position: [0, 0, 0], fov: 50 }}>
+      <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
         <group position={[0, -0.65, 0]}>
           <AccumulativeShadows
             temporal
@@ -44,13 +45,14 @@ export default function App() {
         <Env />
         <OrbitControls
           autoRotate
-          autoRotateSpeed={1}
+          autoRotateSpeed={0.5}
           enablePan={false}
           enableZoom={false}
           minPolarAngle={Math.PI / 2.1}
           maxPolarAngle={Math.PI / 2.1}
         />
       </Canvas>
+      <Cart />
       <Router>
         <Navbar />
         <Routes>
@@ -65,15 +67,12 @@ export default function App() {
   );
 }
 
-export function Env() {
-  return (
-    <Sky
-      background
-      blur={1}
-      resolution={4096}
-      sunPosition={[0, 1, 0]}
-      inclination={0.5}
-      azimuth={0.25}
-    />
-  );
+function Env() {
+
+  return <Environment
+    files="/Pictures/HDR/rustig_koppie_puresky_2k.hdr"
+    background
+    blur={1}
+
+  />;
 }
