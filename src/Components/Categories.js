@@ -48,16 +48,17 @@ export default function Categories() {
       transition: "all 0.3s ease",
       outline: "none",
       marginTop: "10px",
+      boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
   };
 
   // Media query to change the font size
   const isMobile = useMediaQuery("(max-width: 600px)");
   if (isMobile) {
     styleAbout.fontSize = "0.7rem";
-    styleAbout.top = "20%";
+    styleAbout.top = "10%";
     styleCategories.fontSize = "0.7rem";
     styleCategories.flexDirection = "column";
-    styleCategories.top = "140%";
+    styleCategories.top = "110%";
   }
 
   // Color state and interval timer to update the color

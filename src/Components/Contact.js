@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Contact() {
   // Style for the title
@@ -68,6 +69,23 @@ export default function Contact() {
     cursor: "pointer",
     fontSize: "1rem",
   };
+
+  // Media query to change the font size
+  const isMobile = useMediaQuery("(max-width: 600px)");
+  if (isMobile) {
+    styleContact.fontSize = "0.7rem";
+    styleContact.top = "10%";
+    styleFormContainer.width = "80%";
+    styleFormContainer.height = "70%";
+    styleFormContainer.top = "50%";
+    styleFormContainer.left = "50%";
+    styleFormContainer.transform = "translate(-50%, -50%)";
+    styleFormContainer.padding = "10px";
+    styleFormContainer.borderRadius = "5px";
+    styleLabel.fontSize = "0.7rem";
+    styleInput.fontSize = "0.7rem";
+    styleButton.fontSize = "0.7rem";
+  }
 
   // Color state and interval timer to update the color
   const [color, setColor] = useState("black");
