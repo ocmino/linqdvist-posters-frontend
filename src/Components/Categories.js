@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mantine/hooks";
 import Cart from "./Cart/Cart";
-
+import QRCode from 'qrcode.react';
 export default function Categories() {
   const [cartItems, setCartItems] = useState([]);
-
+  const [modelUrl, setModelUrl] = useState('./Models/Poster.gltf');
   const addToCart = (item) => {
     setCartItems([...cartItems, item]);
   };
+
   // Style for the title
   const styleAbout = {
     position: "absolute",
@@ -69,7 +70,7 @@ export default function Categories() {
   }, []);
 
   return (
-    <div>
+    <div> 
       <Cart cartItems={cartItems} />
       <div style={{ ...styleAbout, color }}>
         <h1>Våra unika posters</h1>
@@ -82,7 +83,6 @@ export default function Categories() {
           }}
         >
           <p1>Poster 1 - 299 SEK</p1>
-
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
             alt="Category 1"

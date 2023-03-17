@@ -16,7 +16,7 @@ function Cart({ cartItems }) {
   }, 0);
 
   return (
-    <div style={{ position: "fixed", bottom: 0, right: 0 }}>
+    <div style={{ position: "fixed", bottom: 0, right: 0, zIndex: 1 }}>
       <button onClick={toggleCart}>Cart ({cartItems.length})</button>
       {isOpen && (
         <div style={{ backgroundColor: "white", padding: "10px" }}>

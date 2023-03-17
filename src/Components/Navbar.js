@@ -4,13 +4,13 @@ import { useMediaQuery } from "@mantine/hooks";
 
 export default function Navbar() {
   let style = {
-    position: "fixed",
+    position: "absolute",
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
     padding: "0 20px",
     height: "40px",
-    width: "100%",
+    width: "100vw",
     color: "white",
     textTransform: "uppercase",
     zIndex: "1",

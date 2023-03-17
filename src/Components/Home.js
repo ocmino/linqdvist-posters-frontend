@@ -1,13 +1,16 @@
 import { FiChevronDown } from "react-icons/fi";
-import { Carousel } from '@mantine/carousel';
+import { useMediaQuery } from "@mantine/hooks";
 export default function Home() {
- 
-
   //array of background images
-  const background = [
-    "./Pictures/HomePage.jpeg",
-    "./Pictures/First.png",
-  ]
+  const background = ["./Pictures/HomePage.jpeg", "./Pictures/First.png"];
+
+  const styleContainer = {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+  };
 
   //background image
   const style = {
@@ -32,16 +35,23 @@ export default function Home() {
 
   const text = {
     position: "absolute",
-    top: "69vh",
-    left: "33%",
+    top: "92vh",
+    left: "42%",
     transform: "translate(-50%, -50%)",
     color: "black",
     fontSize: "1rem",
     fontWeight: "bold",
     transition: "color 2s linear",
     padding: "20px",
-    width: "65%",
+    width: "35%",
     height: "50%",
+  };
+
+  const selectedPosters = {
+    position: "absolute",
+    top: "110%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
   };
 
   const posters = {
@@ -49,17 +59,37 @@ export default function Home() {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gridGap: "50px",
-    top: "235%",
+    top: "150%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
 
-  const selectedPosters = {
+  const styleImg = {
     position: "absolute",
-    top: "170%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+            top: "103%",
+            left: "60%",
+            width: "40%",
+
   };
+
+  const imgSrc = [
+    "./Pictures/LogoType.png",
+   ]
+
+  // Media query to change the font size
+  const isMobile = useMediaQuery("(max-width: 600px)");
+  if (isMobile) {
+    styleContainer.height = "100%";
+    styleContainer.width = "100%";
+    style.width = "100%";
+    posters.gridTemplateColumns = "repeat(1, 1fr)";
+    posters.gridGap = "10px";
+    posters.top = "200%";
+    styleImg.width = "25%";
+    text.fontSize = "0.7rem";
+    text.width = "85%";
+    text.left = "50%";
+  }
 
   //function to scroll down to the posters
   const scrollDown = () => {
@@ -71,18 +101,15 @@ export default function Home() {
   };
 
   return (
-    <div style={style}>
-      
-      <img
-        style={{
-          position: "absolute",
-          top: "105%",
-          left: "60%",
-          width: "40%",
-        }}
-        src="/Pictures/LogoType.png"
-        alt="poster"
-      />
+    <div style={styleContainer}>
+      <div style={style}>
+        <img style={styleImg} 
+
+          src={imgSrc}
+          alt="poster"
+        />
+      </div>
+
       <div style={text}>
         <h2>Gör ditt hem mer personligt</h2>
         <p>
@@ -96,12 +123,13 @@ export default function Home() {
           vilket underlättar att hitta posters i just din stil.
         </p>
       </div>
+
       <button
         onClick={scrollDown}
         style={{
           position: "absolute",
-          top: "150%",
-          right: "0%",
+          top: "95%",
+          right: "10%",
           transform: "translate(-50%, -50%)",
           backgroundColor: "transparent",
           border: "none",

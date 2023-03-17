@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@mantine/hooks";
 
 export default function About() {
+  const styleContainer = {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+  };
   // Style for the title
   const styleAbout = {
     position: "absolute",
@@ -47,7 +54,7 @@ export default function About() {
   }, []);
 
   return (
-    <div>
+    <div style={styleContainer}>
       <div style={{ ...styleAbout, color }}>
         <h1>Om oss</h1>
       </div>
