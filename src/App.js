@@ -17,7 +17,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Categories from "./Components/Categories";
 import { Gallery } from "./Components/3DGallery";
-import { Cart } from "./Components/Cart/Cart";
+import  Cart  from "./Components/Cart/Cart";
 import Footer from "./Components/Footer";
 
 export default function App() {

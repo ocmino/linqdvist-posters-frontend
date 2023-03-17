@@ -1,6 +1,13 @@
 import { FiChevronDown } from "react-icons/fi";
+import { Carousel } from '@mantine/carousel';
 export default function Home() {
-  const background = "./Pictures/HomePage.jpeg";
+ 
+
+  //array of background images
+  const background = [
+    "./Pictures/HomePage.jpeg",
+    "./Pictures/First.png",
+  ]
 
   //background image
   const style = {
@@ -16,7 +23,7 @@ export default function Home() {
     width: "50%",
     height: "50%",
     borderRadius: "10px",
-    backgroundImage: `url(${background})`,
+    backgroundImage: `url(${background[0]})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -63,15 +70,19 @@ export default function Home() {
     });
   };
 
-
   return (
     <div style={style}>
-       <img style={{
+      
+      <img
+        style={{
           position: "absolute",
           top: "105%",
           left: "60%",
           width: "40%",
-        }} src="/Pictures/LogoType.png" alt="poster" />
+        }}
+        src="/Pictures/LogoType.png"
+        alt="poster"
+      />
       <div style={text}>
         <h2>Gör ditt hem mer personligt</h2>
         <p>

@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mantine/hooks";
+import Cart from "./Cart/Cart";
 
 export default function Categories() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
   // Style for the title
   const styleAbout = {
     position: "absolute",
@@ -29,17 +35,29 @@ export default function Categories() {
     padding: "20px",
   };
 
+  const addToCartButton = {
+      padding: "10px",
+      borderRadius: "10px",
+      backgroundColor: "white",
+      color: "black",
+      border: "none",
+      cursor: "pointer",
+      fontSize: "1rem",
+      fontWeight: "bold",
+      transition: "all 0.3s ease",
+      outline: "none",
+      marginTop: "10px",
+  };
+
   // Media query to change the font size
   const isMobile = useMediaQuery("(max-width: 600px)");
-if (isMobile) {
-  styleAbout.fontSize = "0.7rem";
-  styleAbout.top = "20%";
-  styleCategories.fontSize = "0.7rem";
-  styleCategories.flexDirection = "column";
-  styleCategories.top = "140%";
-}
-
-
+  if (isMobile) {
+    styleAbout.fontSize = "0.7rem";
+    styleAbout.top = "20%";
+    styleCategories.fontSize = "0.7rem";
+    styleCategories.flexDirection = "column";
+    styleCategories.top = "140%";
+  }
 
   // Color state and interval timer to update the color
   const [color, setColor] = useState("black");
@@ -52,41 +70,68 @@ if (isMobile) {
 
   return (
     <div>
+      <Cart cartItems={cartItems} />
       <div style={{ ...styleAbout, color }}>
         <h1>Våra unika posters</h1>
       </div>
 
       <div style={{ ...styleCategories, color }}>
-        <Link
+        <div
           style={{
             padding: "20px",
           }}
         >
+          <p1>Poster 1 - 299 SEK</p1>
+
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
             alt="Category 1"
           />
-        </Link>
-        <Link
+          <button
+        style={addToCartButton}
+        onClick={() => addToCart({ name: "Poster 1", price: 399 })}
+      >
+        Lägg till i kundvagnen
+      </button>
+        </div>
+
+        <div
           style={{
             padding: "20px",
           }}
         >
+          <p1>Poster 2 - 399 SEK</p1>
+
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_360x.jpg?v=1574715772"
-            alt="Category 2"
+            alt="Category 1"
           />
-        </Link>
-        <Link
+          <button
+        style={addToCartButton}
+        onClick={() => addToCart({ name: "Poster 2", price: 399 })}
+      >
+        Lägg till i kundvagnen
+      </button>
+        </div>
+
+        <div
           style={{
             padding: "20px",
           }}
         >
+          <p1>Poster 3 - 249 SEK</p1>
+
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/iceland-2-1_360x.jpg?v=1520528278"
-            alt="Category 3"
+            alt="Category 1"
           />
-        </Link>
+          <button
+        style={addToCartButton}
+        onClick={() => addToCart({ name: "Poster 3", price: 249 })}
+      >
+        Lägg till i kundvagnen
+      </button>
+        </div>
       </div>
     </div>
   );
