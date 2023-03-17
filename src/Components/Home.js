@@ -63,8 +63,15 @@ export default function Home() {
     });
   };
 
+
   return (
     <div style={style}>
+       <img style={{
+          position: "absolute",
+          top: "105%",
+          left: "60%",
+          width: "40%",
+        }} src="/Pictures/LogoType.png" alt="poster" />
       <div style={text}>
         <h2>Gör ditt hem mer personligt</h2>
         <p>
