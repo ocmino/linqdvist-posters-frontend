@@ -1,3 +1,4 @@
+import { FiChevronDown } from "react-icons/fi";
 export default function Home() {
   const background = "./Pictures/HomePage.jpeg";
 
@@ -51,8 +52,15 @@ export default function Home() {
     top: "170%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+  };
 
-    
+  //function to scroll down to the posters
+  const scrollDown = () => {
+    window.scrollTo({
+      top: 1000,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -70,10 +78,24 @@ export default function Home() {
           vilket underlättar att hitta posters i just din stil.
         </p>
       </div>
+      <button
+        onClick={scrollDown}
+        style={{
+          position: "absolute",
+          top: "150%",
+          right: "0%",
+          transform: "translate(-50%, -50%)",
+          backgroundColor: "transparent",
+          border: "none",
+          fontSize: "2rem",
+        }}
+      >
+        <FiChevronDown />
+      </button>
 
       <div style={selectedPosters}>
-          <h2>Utvalda posters</h2>
-        </div>
+        <h2>Utvalda posters</h2>
+      </div>
 
       <div style={posters}>
         <img
