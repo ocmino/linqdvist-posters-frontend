@@ -17,7 +17,7 @@ export default function Navbar() {
     fontSize: "1rem",
     left: "50%",
     transform: "translate(-50%, 0)",
-    
+
   };
 
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -59,7 +59,7 @@ export default function Navbar() {
           fontWeight: "bold",
         }}
       >
-        Kategorier
+        Våra posters
       </Link>
       <Link
         to="/gallery"

@@ -51,7 +51,7 @@ export const Gallery = () => (
     <div style={textStyleVisible}>
       <h1>Välkommen till det virtuella galleriet!</h1>
       <p>
-        Ett smidigt och sätt att få en känsla för hur en bild ser ut i
+        Ett smidigt och roligt sätt att få en känsla för hur en bild ser ut i
         verkligheten.
       </p>
     </div>

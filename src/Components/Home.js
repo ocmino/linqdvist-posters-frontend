@@ -41,9 +41,18 @@ export default function Home() {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gridGap: "50px",
-    top: "275%",
+    top: "235%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+  };
+
+  const selectedPosters = {
+    position: "absolute",
+    top: "170%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+
+    
   };
 
   return (
@@ -62,6 +71,10 @@ export default function Home() {
         </p>
       </div>
 
+      <div style={selectedPosters}>
+          <h2>Utvalda posters</h2>
+        </div>
+
       <div style={posters}>
         <img
           src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
@@ -77,24 +90,7 @@ export default function Home() {
           src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
           alt="Category 1"
         />
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
-          alt="Category 1"
-        />
-
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
-          alt="Category 1"
-        />
-
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
-          alt="Category 1"
-        />
-
-        <div>
-          <h2>Upptäck våra kategorier</h2>
-        </div>
+        <br />
       </div>
     </div>
   );

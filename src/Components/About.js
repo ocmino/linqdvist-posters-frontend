@@ -64,6 +64,12 @@ export default function About() {
         personlighet och stil. Tavlor, posters, affischer, prints, planscher -
         kärt barn har många namn! Här hittar du våra senaste nyheter från våra
         formgivare.
+        <img style={{
+          position: "absolute",
+          top: "110%",
+          left: "50%",
+          width: "40%",
+        }} src="/Pictures/signature.png" alt="poster" />
       </p>
     </div>
   );

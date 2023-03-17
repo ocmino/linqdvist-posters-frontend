@@ -53,7 +53,7 @@ if (isMobile) {
   return (
     <div>
       <div style={{ ...styleAbout, color }}>
-        <h1>Kategorier</h1>
+        <h1>Våra unika posters</h1>
       </div>
 
       <div style={{ ...styleCategories, color }}>
