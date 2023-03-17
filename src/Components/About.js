@@ -36,6 +36,8 @@ export default function About() {
   // Media query to change the font size
   const isMobile = useMediaQuery("(max-width: 600px)");
   if (isMobile) {
+    styleContainer.height = "100vh";
+    styleContainer.width = "100vw";
     styleAbout.fontSize = "0.8rem";
     styleText.fontSize = "0.8rem";
     styleText.width = "85%";

@@ -10,6 +10,14 @@ export default function Categories() {
     setCartItems([...cartItems, item]);
   };
 
+  const styleContainer = {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+  };
+
   // Style for the title
   const styleAbout = {
     position: "absolute",
@@ -54,11 +62,11 @@ export default function Categories() {
   // Media query to change the font size
   const isMobile = useMediaQuery("(max-width: 600px)");
   if (isMobile) {
-    styleAbout.fontSize = "0.7rem";
+    styleAbout.fontSize = "0.6rem";
     styleAbout.top = "10%";
     styleCategories.fontSize = "0.7rem";
     styleCategories.flexDirection = "column";
-    styleCategories.top = "110%";
+    styleCategories.top = "120%";
   }
 
   // Color state and interval timer to update the color
@@ -71,7 +79,7 @@ export default function Categories() {
   }, []);
 
   return (
-    <div> 
+    <div style={styleContainer}>
       <Cart cartItems={cartItems} />
       <div style={{ ...styleAbout, color }}>
         <h1>Våra unika posters</h1>
@@ -135,5 +143,6 @@ export default function Categories() {
         </div>
       </div>
     </div>
+          
   );
 }
