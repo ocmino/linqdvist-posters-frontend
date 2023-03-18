@@ -66,15 +66,12 @@ export default function Home() {
 
   const styleImg = {
     position: "absolute",
-            top: "103%",
-            left: "60%",
-            width: "40%",
-
+    top: "103%",
+    left: "60%",
+    width: "40%",
   };
 
-  const imgSrc = [
-    "./Pictures/LogoType.png",
-   ]
+  const imgSrc = ["./Pictures/LogoType.png"];
 
   // Media query to change the font size
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -82,10 +79,14 @@ export default function Home() {
     styleContainer.height = "100%";
     styleContainer.width = "100%";
     style.width = "100%";
+    selectedPosters.top = "105%";
     posters.gridTemplateColumns = "repeat(1, 1fr)";
     posters.gridGap = "10px";
     posters.top = "200%";
-    styleImg.width = "25%";
+    styleImg.width = "50%";
+    styleImg.top = "-7.5%";
+    styleImg.left = "50%";
+    styleImg.transform = "translate(-50%, -50%)";
     text.fontSize = "0.7rem";
     text.width = "85%";
     text.left = "50%";
@@ -103,11 +104,7 @@ export default function Home() {
   return (
     <div style={styleContainer}>
       <div style={style}>
-        <img style={styleImg} 
-
-          src={imgSrc}
-          alt="poster"
-        />
+        <img style={styleImg} src={imgSrc} alt="poster" />
       </div>
 
       <div style={text}>
