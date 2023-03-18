@@ -77,8 +77,8 @@ export default function Home() {
   // Media query to change the font size
   const isMobile = useMediaQuery("(max-width: 600px)");
   if (isMobile) {
-    styleContainer.height = "100%";
-    styleContainer.width = "100%";
+    styleContainer.height = "100vh";
+    styleContainer.width = "100vw";
     style.width = "100%";
     selectedPosters.top = "105%";
     posters.gridTemplateColumns = "repeat(1, 1fr)";
