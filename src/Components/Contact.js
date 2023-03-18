@@ -5,13 +5,15 @@ export default function Contact() {
   // Style for the title
   const styleContact = {
     position: "absolute",
-    top: "25%",
+    top: "15%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: "black",
     fontSize: "1rem",
     fontWeight: "bold",
     transition: "color 2s linear",
+    height: "100vh",
+    width: "100vw",
   };
 
   const styleFormContainer = {

@@ -46,7 +46,7 @@ export default function App() {
         <Env />
         <OrbitControls
           autoRotate
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={0.4}
           enablePan={false}
           enableZoom={false}
           enableRotate={false}
@@ -73,7 +73,8 @@ export default function App() {
 function Env() {
 
   return <Environment
-    files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"
+    /*files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"*/
+    preset="sunset"
     background
     blur={1}
 

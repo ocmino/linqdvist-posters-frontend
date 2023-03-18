@@ -49,8 +49,9 @@ export default function Home() {
 
   const selectedPosters = {
     position: "absolute",
-    top: "110%",
+    top: "115%",
     left: "50%",
+
     transform: "translate(-50%, -50%)",
   };
 

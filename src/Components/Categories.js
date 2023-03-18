@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mantine/hooks";
 import Cart from "./Cart/Cart";
-import QRCode from 'qrcode.react';
+import QRCode from "qrcode.react";
 export default function Categories() {
   const [cartItems, setCartItems] = useState([]);
-  const [modelUrl, setModelUrl] = useState('./Models/Poster.gltf');
+  const [modelUrl, setModelUrl] = useState("./Models/Poster.gltf");
   const addToCart = (item) => {
     setCartItems([...cartItems, item]);
   };
@@ -45,18 +45,18 @@ export default function Categories() {
   };
 
   const addToCartButton = {
-      padding: "10px",
-      borderRadius: "10px",
-      backgroundColor: "white",
-      color: "black",
-      border: "none",
-      cursor: "pointer",
-      fontSize: "1rem",
-      fontWeight: "bold",
-      transition: "all 0.3s ease",
-      outline: "none",
-      marginTop: "10px",
-      boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+    padding: "10px",
+    borderRadius: "10px",
+    backgroundColor: "white",
+    color: "black",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    transition: "all 0.3s ease",
+    outline: "none",
+    marginTop: "10px",
+    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
   };
 
   // Media query to change the font size
@@ -66,7 +66,8 @@ export default function Categories() {
     styleAbout.top = "10%";
     styleCategories.fontSize = "0.7rem";
     styleCategories.flexDirection = "column";
-    styleCategories.top = "120%";
+    styleCategories.top = "65%";
+    addToCartButton.fontSize = "0.5rem";
   }
 
   // Color state and interval timer to update the color
@@ -86,63 +87,53 @@ export default function Categories() {
       </div>
 
       <div style={{ ...styleCategories, color }}>
-        <div
-          style={{
-            padding: "20px",
-          }}
-        >
+        <div>
           <p1>Poster 1 - 299 SEK</p1>
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
             alt="Category 1"
+            style={{ width: "90%" } }
           />
           <button
-        style={addToCartButton}
-        onClick={() => addToCart({ name: "Poster 1", price: 399 })}
-      >
-        Lägg till i kundvagnen
-      </button>
+            style={addToCartButton}
+            onClick={() => addToCart({ name: "Poster 1", price: 399 })}
+          >
+            Lägg till i kundvagnen
+          </button>
         </div>
 
-        <div
-          style={{
-            padding: "20px",
-          }}
-        >
+        <div>
           <p1>Poster 2 - 399 SEK</p1>
 
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_360x.jpg?v=1574715772"
             alt="Category 1"
+            style={{ width: "90%" } }
           />
           <button
-        style={addToCartButton}
-        onClick={() => addToCart({ name: "Poster 2", price: 399 })}
-      >
-        Lägg till i kundvagnen
-      </button>
+            style={addToCartButton}
+            onClick={() => addToCart({ name: "Poster 2", price: 399 })}
+          >
+            Lägg till i kundvagnen
+          </button>
         </div>
 
-        <div
-          style={{
-            padding: "20px",
-          }}
-        >
+        <div>
           <p1>Poster 3 - 249 SEK</p1>
 
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/iceland-2-1_360x.jpg?v=1520528278"
             alt="Category 1"
+            style={{ width: "90%" } }
           />
           <button
-        style={addToCartButton}
-        onClick={() => addToCart({ name: "Poster 3", price: 249 })}
-      >
-        Lägg till i kundvagnen
-      </button>
+            style={addToCartButton}
+            onClick={() => addToCart({ name: "Poster 3", price: 249 })}
+          >
+            Lägg till i kundvagnen
+          </button>
         </div>
       </div>
     </div>
-          
   );
 }
