@@ -34,7 +34,7 @@ export default function Categories() {
     position: "absolute",
     display: "flex",
     justifyContent: "space-between",
-    top: "70%",
+    top: "75%",
     left: "50%",
     width: "80%",
     transform: "translate(-50%, -50%)",
