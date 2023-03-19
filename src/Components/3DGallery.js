@@ -10,7 +10,7 @@ import { useMediaQuery } from "@mantine/hooks";
 
 const GOLDENRATIO = 1.61803398875;
 
-var textStyleVisible = {
+const textStyleVisible = {
   position: "absolute",
   top: "80%",
   left: "50%",
@@ -18,45 +18,52 @@ var textStyleVisible = {
   color: "black",
 };
 
-var textStyleHidden = {
+const textStyleHidden = {
   ...textStyleVisible,
   color: "transparent",
 };
 
-function toggleTextStyle() {
-  if (textStyleVisible.color === "transparent") {
-    textStyleVisible = { ...textStyleVisible, color: "black" };
-    textStyleHidden = { ...textStyleHidden, color: "transparent" };
-  } else {
-    textStyleVisible = { ...textStyleVisible, color: "transparent" };
-    textStyleHidden = { ...textStyleHidden, color: "black" };
-  }
-}
+export const Gallery = () => {
+  const [visibleStyle, setVisibleStyle] = useState(textStyleVisible);
+  const [hiddenStyle, setHiddenStyle] = useState(textStyleHidden);
 
-export const Gallery = () => (
-  <div
-    style={{
-      position: "absolute",
-      left: "50%",
-      top: "50vh",
-      transform: "translate(-50%, -50%)",
-      width: "100%",
-      height: "100%",
-      textAlign: "center",
-    }}
-  >
-    <Canvas dpr={[1, 1.5]} camera={{ fov: 70, position: [0, 2, 15] }}>
-      <Frames images={images} />
-    </Canvas>
-    <div style={textStyleVisible}>
-      <h1>Välkommen till det virtuella galleriet!</h1>
-      <p>
-        Ett smidigt och roligt sätt att få en känsla för hur en bild ser ut i
-        verkligheten.
-      </p>
+  //toggle between visible and hidden styles
+  const toggleText = () => {
+    if (visibleStyle.color === "black") {
+      setVisibleStyle(hiddenStyle);
+      setHiddenStyle({ ...hiddenStyle, color: "black" });
+    } else {
+      setVisibleStyle({ ...visibleStyle, color: "black" });
+      setHiddenStyle({ ...hiddenStyle, color: "transparent" });
+    }
+  };
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: "50%",
+        top: "50vh",
+        transform: "translate(-50%, -50%)",
+        width: "100%",
+        height: "100%",
+        textAlign: "center",
+      }}
+    >
+      <Canvas dpr={[1, 1.5]} camera={{ fov: 70, position: [0, 2, 15] }}>
+        <Frames images={images} />
+      </Canvas>
+      <div style={visibleStyle}>
+        <h1>Välkommen till det virtuella galleriet!</h1>
+        <p>
+          Ett smidigt och roligt sätt att få en känsla för hur en bild ser ut i
+          verkligheten.
+          <button onClick={toggleText}>Klicka här för att visa texten</button>
+        </p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const pexel = (id) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`;
@@ -129,7 +136,6 @@ function Frames({
       ref={ref}
       onClick={(e) => (
         e.stopPropagation(),
-        toggleTextStyle(),
         setLocation(
           clicked.current === e.object ? "/" : "/item/" + e.object.name
         )

@@ -4,6 +4,7 @@ export default function Home() {
   //array of background images
   const background = ["./Pictures/HomePage.jpeg", "./Pictures/First.png"];
 
+  //container
   const styleContainer = {
     position: "absolute",
     top: "0",
@@ -49,7 +50,7 @@ export default function Home() {
 
   const selectedPosters = {
     position: "absolute",
-    top: "115%",
+    top: "110%",
     left: "50%",
 
     transform: "translate(-50%, -50%)",
@@ -60,16 +61,16 @@ export default function Home() {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gridGap: "50px",
-    top: "150%",
+    top: "160%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
 
   const styleImg = {
     position: "absolute",
-    top: "103%",
-    left: "60%",
-    width: "40%",
+    top: "105%",
+    left: "64%",
+    width: "35%",
   };
 
   const imgSrc = ["./Pictures/LogoType.png"];
@@ -83,12 +84,12 @@ export default function Home() {
     selectedPosters.top = "105%";
     posters.gridTemplateColumns = "repeat(1, 1fr)";
     posters.gridGap = "10px";
-    posters.top = "200%";
+    posters.top = "197.5%";
     styleImg.width = "50%";
     styleImg.top = "-7.5%";
     styleImg.left = "50%";
     styleImg.transform = "translate(-50%, -50%)";
-    text.fontSize = "0.7rem";
+    text.fontSize = "0.65rem";
     text.width = "85%";
     text.left = "50%";
   }

@@ -34,8 +34,9 @@ export default function Categories() {
     position: "absolute",
     display: "flex",
     justifyContent: "space-between",
-    top: "60%",
+    top: "70%",
     left: "50%",
+    width: "80%",
     transform: "translate(-50%, -50%)",
     color: "white",
     fontSize: "1rem",
@@ -92,7 +93,6 @@ export default function Categories() {
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
             alt="Category 1"
-            style={{ width: "90%" } }
           />
           <button
             style={addToCartButton}
@@ -108,7 +108,6 @@ export default function Categories() {
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_360x.jpg?v=1574715772"
             alt="Category 1"
-            style={{ width: "90%" } }
           />
           <button
             style={addToCartButton}
@@ -124,7 +123,6 @@ export default function Categories() {
           <img
             src="https://cdn.shopify.com/s/files/1/2469/4477/products/iceland-2-1_360x.jpg?v=1520528278"
             alt="Category 1"
-            style={{ width: "90%" } }
           />
           <button
             style={addToCartButton}
