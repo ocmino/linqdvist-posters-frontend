@@ -24,6 +24,7 @@ const Cart = (props) => {
       {cartCtx.items.map((item) => (
         <CartItem
           key={item.id}
+          id={item.id}
           name={item.name}
           amount={item.amount}
           price={item.price}
@@ -33,6 +34,16 @@ const Cart = (props) => {
       ))}
     </ul>
   );
+
+
+  //this array will be used to create the order, to the endpoint
+  const cartItemIds = cartCtx.items.flatMap(item => Array.from({ length: item.amount }, () => item.id));
+  console.log(cartItemIds);
+  
+
+
+
+
 
   return (
     <Modal onClose={props.onClose}>

@@ -94,10 +94,16 @@ export default function Categories() {
       </div>
 
       <p style={{ ...styleText, color }}>
-        Nedan hittar du våra unika posters. Vi har valt ut de bästa och mest
-        unika posters som vi tror att du kommer att gilla. Vi har valt ut
-        posters som är både vackra och inspirerande. Vi hoppas att du kommer att
-        hitta något som du gillar.
+        Nedan hittar du våra unika posters och prints som är tillgängliga för
+        köp. Här kan du hitta allt från färgglada grafiska prints till mer
+        minimalistiska fotografier. Vi samarbetar endast med nordiska designers
+        för att erbjuda våra kunder det mest autentiska och unika utbudet. Vårt
+        sortiment är uppdelat i olika kategorier för att göra det enklare för
+        dig att hitta rätt. Välj mellan storlekar som passar perfekt för att
+        pryda väggen i din hall, vardagsrum eller sovrum. Vi erbjuder också
+        olika tekniker såsom tryck på papper eller canvas för att skapa en unik
+        och personlig touch i ditt hem. Gör dig redo att förnya ditt hem med
+        våra fantastiska posters och prints!
       </p>
       <button
         onClick={scrollDown}

@@ -33,6 +33,11 @@ const DUMMY_POSTERS = [
 
 ];
 
+//alert on click
+const alert = () => {
+  alert("You clicked me!");
+};
+
 const AvailableMeals = () => {
   const postersList = DUMMY_POSTERS.map((meal) => (
     <MealItem
