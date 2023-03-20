@@ -15,7 +15,7 @@ export default function Home() {
   //background image
   const style = {
     position: "absolute",
-    top: "40%",
+    top: "37.5%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: "black",
@@ -35,7 +35,7 @@ export default function Home() {
 
   const styleText = {
     position: "absolute",
-    top: "80%",
+    top: "82%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     fontSize: "1rem",

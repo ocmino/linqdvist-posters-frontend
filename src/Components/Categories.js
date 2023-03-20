@@ -81,7 +81,7 @@ export default function Categories() {
 
   const scrollDown = () => {
     window.scrollTo({
-      top: 1000,
+      top: 750,
       left: 0,
       behavior: "smooth",
     });
@@ -115,6 +115,7 @@ export default function Categories() {
           backgroundColor: "transparent",
           border: "none",
           fontSize: "2rem",
+          zIndex: "100",
         }}
       >
         <FiChevronDown />

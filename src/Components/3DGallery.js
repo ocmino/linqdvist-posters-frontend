@@ -6,7 +6,7 @@ import { useCursor, Image, Text } from "@react-three/drei";
 import { useRoute, useLocation } from "wouter";
 import { easing } from "maath";
 import getUuid from "uuid-by-string";
-import { useMediaQuery } from "@mantine/hooks";
+
 
 const GOLDENRATIO = 1.61803398875;
 
@@ -31,7 +31,7 @@ export const Gallery = () => {
   const toggleText = () => {
     if (visibleStyle.color === "black") {
       setVisibleStyle(hiddenStyle);
-      setHiddenStyle({ ...hiddenStyle, color: "black" });
+      setHiddenStyle({ ...hiddenStyle, color: "transparent" });
     } else {
       setVisibleStyle({ ...visibleStyle, color: "black" });
       setHiddenStyle({ ...hiddenStyle, color: "transparent" });
@@ -58,17 +58,8 @@ export const Gallery = () => {
         <p>
           Ett smidigt och roligt sätt att få en känsla för hur en bild ser ut i
           verkligheten.
-          <button
-           style={{
-              position: "absolute",
-              top: "100%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              color: "black",
-               }
-           }
-           onClick={toggleText}>Klicka här för att visa texten</button>
         </p>
+        <button onClick={toggleText}>Dölj text</button>
       </div>
     </div>
   );
