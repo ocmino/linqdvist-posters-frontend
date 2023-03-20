@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@mantine/hooks";
 import Meals from "./Meals/Meals";
+import { FiChevronDown } from "react-icons/fi";
 
 export default function Categories() {
   const styleContainer = {
@@ -78,6 +79,15 @@ export default function Categories() {
     return () => clearInterval(interval);
   }, []);
 
+  const scrollDown = () => {
+    window.scrollTo({
+      top: 1000,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+
   return (
     <div style={styleContainer}>
       <div style={{ ...styleAbout, color }}>
@@ -91,7 +101,20 @@ export default function Categories() {
         som du gillar.
 
       </p>
-
+      <button
+        onClick={scrollDown}
+        style={{
+          position: "absolute",
+          top: "95%",
+          right: "10%",
+          transform: "translate(-50%, -50%)",
+          backgroundColor: "transparent",
+          border: "none",
+          fontSize: "2rem",
+        }}
+      >
+        <FiChevronDown />
+      </button>
      <Meals 
       style={{ ...stylePosters, color }}
       />

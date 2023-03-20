@@ -10,8 +10,9 @@ export default function Home() {
     position: "absolute",
     top: "0",
     left: "0",
-    width: "100%",
-    height: "100%",
+    bottom: "0",
+    width: "100vw",
+    height: "100vh",
     margin: "0",
     padding: "0",
   };
@@ -124,43 +125,6 @@ export default function Home() {
           hemmet. Du kan se alla motiv utifrån kategori, teknik eller storlek
           vilket underlättar att hitta posters i just din stil.
         </p>
-      </div>
-
-      <button
-        onClick={scrollDown}
-        style={{
-          position: "absolute",
-          top: "95%",
-          right: "10%",
-          transform: "translate(-50%, -50%)",
-          backgroundColor: "transparent",
-          border: "none",
-          fontSize: "2rem",
-        }}
-      >
-        <FiChevronDown />
-      </button>
-
-      <div style={selectedPosters}>
-        <h2>Utvalda posters</h2>
-      </div>
-
-      <div style={posters}>
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
-          alt="Category 1"
-        />
-
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
-          alt="Category 1"
-        />
-
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
-          alt="Category 1"
-        />
-        <br />
       </div>
     </div>
   );
