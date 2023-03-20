@@ -33,18 +33,14 @@ export default function Home() {
     boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
   };
 
-  const text = {
+  const styleText = {
     position: "absolute",
-    top: "93vh",
-    left: "42%",
+    top: "80%",
+    left: "50%",
     transform: "translate(-50%, -50%)",
-    color: "black",
     fontSize: "1rem",
     fontWeight: "bold",
-    transition: "color 2s linear",
     padding: "20px",
-    width: "35%",
-    height: "50%",
   };
 
   const selectedPosters = {
@@ -67,7 +63,7 @@ export default function Home() {
 
   const styleImg = {
     position: "absolute",
-    top: "104%",
+    top: "105%",
     left: "64%",
     width: "35%",
   };
@@ -88,9 +84,9 @@ export default function Home() {
     styleImg.top = "-7.5%";
     styleImg.left = "50%";
     styleImg.transform = "translate(-50%, -50%)";
-    text.fontSize = "0.65rem";
-    text.width = "85%";
-    text.left = "50%";
+    styleText.fontSize = "0.65rem";
+    styleText.width = "85%";
+    styleText.left = "50%";
   }
 
   return (
@@ -99,7 +95,7 @@ export default function Home() {
         <img style={styleImg} src={imgSrc} alt="poster" />
       </div>
 
-      <div style={text}>
+      <div style={styleText}>
         <h2>Gör ditt hem mer personligt</h2>
         <p>
           Upptäck vårt spännande utbud av vackra och unika posters och prints
@@ -112,6 +108,7 @@ export default function Home() {
           vilket underlättar att hitta posters i just din stil.
         </p>
       </div>
+   
     </div>
   );
 }
