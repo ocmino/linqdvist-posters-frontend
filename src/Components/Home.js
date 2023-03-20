@@ -39,11 +39,11 @@ export default function Home() {
 
   const text = {
     position: "absolute",
-    top: "94vh",
+    top: "93vh",
     left: "42%",
     transform: "translate(-50%, -50%)",
     color: "black",
-    fontSize: "0.8rem",
+    fontSize: "1rem",
     fontWeight: "bold",
     transition: "color 2s linear",
     padding: "20px",
