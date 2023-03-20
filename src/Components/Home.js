@@ -8,13 +8,8 @@ export default function Home() {
   //container
   const styleContainer = {
     position: "absolute",
-    top: "0",
-    left: "0",
-    bottom: "0",
     width: "100vw",
     height: "100vh",
-    margin: "0",
-    padding: "0",
   };
 
   //background image
@@ -97,15 +92,6 @@ export default function Home() {
     text.width = "85%";
     text.left = "50%";
   }
-
-  //function to scroll down to the posters
-  const scrollDown = () => {
-    window.scrollTo({
-      top: 1000,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div style={styleContainer}>

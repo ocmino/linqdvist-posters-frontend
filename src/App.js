@@ -19,9 +19,18 @@ import Categories from "./Components/Categories";
 import { Gallery } from "./Components/3DGallery";
 import Footer from "./Components/Footer";
 import Header from "./Components/Layout/Header";
-
+import Cart from "./Components/Cart/Cart";
 
 export default function App() {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
   return (
     <div className="App">
       <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
@@ -56,7 +65,8 @@ export default function App() {
         />
       </Canvas>
       <Fragment>
-      <Header />
+        {cartIsShown && <Cart onClose={hideCartHandler} />}
+        <Header onShowCart={showCartHandler} />
       </Fragment>
       <Footer />
       <Router>
@@ -74,12 +84,13 @@ export default function App() {
 }
 
 function Env() {
-
-  return <Environment
-  className="App"
-    /*files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"*/
-    preset="sunset"
-    background
-    blur={1}
-  />
+  return (
+    <Environment
+      className="App"
+      /*files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"*/
+      preset="sunset"
+      background
+      blur={1}
+    />
+  );
 }
