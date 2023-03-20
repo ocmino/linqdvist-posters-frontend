@@ -107,7 +107,6 @@ export default function Home() {
   };
 
   return (
-    
     <div style={styleContainer}>
       <div style={style}>
         <img style={styleImg} src={imgSrc} alt="poster" />
@@ -147,7 +146,6 @@ export default function Home() {
       </div>
 
       <div style={posters}>
-      
         <img
           src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
           alt="Category 1"

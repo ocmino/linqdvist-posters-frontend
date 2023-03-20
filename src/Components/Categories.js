@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@mantine/hooks";
-import { Carousel } from "@mantine/carousel";
 
 export default function Categories() {
   const styleContainer = {
@@ -22,11 +21,24 @@ export default function Categories() {
     transition: "color 2s linear",
   };
 
+  //create a style for the posters, like a photo gallery
   const stylePosters = {
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+    color: "white",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    transition: "color 2s linear",
+    padding: "20px",
+    width: "50%",
+    height: "50%",
+    borderRadius: "10px",
+
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gridGap: "50px",
   };
 
   // Media query to change the font size
@@ -38,6 +50,10 @@ export default function Categories() {
     stylePosters.fontSize = "0.8rem";
     stylePosters.width = "85%";
     stylePosters.top = "50%";
+    stylePosters.left = "50%";
+    stylePosters.gridTemplateColumns = "repeat(1, 1fr)";
+    stylePosters.gridGap = "1rem";
+    stylePosters.top = "300%";
   }
 
   // Color state and interval timer to update the color
@@ -55,64 +71,27 @@ export default function Categories() {
         <h1>Våra unika posters</h1>
       </div>
 
-      <div>
-        <Carousel
-          withIndicators
-          height={"auto"}
-          slideSize="33.333333%"
-          slideGap="md"
-          loop
-          align="start"
-          breakpoints={[
-            { maxWidth: "md", slideSize: "50%" },
-            { maxWidth: "sm", slideSize: "100%", slideGap: 0 },
-          ]}
-          style={stylePosters}
-        >
-          <Carousel.Slide>
-            <img
-              src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
-              alt="poster1"
-              style={{ width: "75%" }}
-            />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <img
-              src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
-              alt="poster1"
-              style={{ width: "75%" }}
-            />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <img
-              src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
-              alt="poster1"
-              style={{ width: "75%" }}
-            />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <img
-              src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
-              alt="poster1"
-              style={{ width: "75%" }}
-            />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <img
-              src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
-              alt="poster1"
-              style={{ width: "75%" }}
-            />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <img
-              src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
-              alt="poster1"
-              style={{ width: "75%" }}
-            />
-          </Carousel.Slide>
-        </Carousel>
-      </div>
+      <div style={{ ...stylePosters, color }}>
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
+          alt="poster1"
+          style={{ width: "95%" }}
+        />
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/vinterns-magi-1_540x.jpg?v=1568752238"
+          alt="poster1"
+          style={{ width: "95%" }}
+        />
+        <img
+          src="https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_540x.jpg?v=1574715772"
+          alt="poster1"
+          style={{ width: "95%" }}
+        />
+
+        </div>
+      
+
+    
     </div>
   );
 }

@@ -3,9 +3,7 @@
 .App {
   height: 100vh;
   width: 100vw;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
+
   display: flex;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */

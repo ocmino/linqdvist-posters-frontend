@@ -1,4 +1,4 @@
-import { useState, useTransition } from "react";
+import { Fragment, useState, useTransition } from "react";
 import { useControls } from "leva";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -17,8 +17,9 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Categories from "./Components/Categories";
 import { Gallery } from "./Components/3DGallery";
-import  Cart  from "./Components/Cart/Cart";
 import Footer from "./Components/Footer";
+import Header from "./Components/Layout/Header";
+
 
 export default function App() {
   return (
@@ -54,7 +55,9 @@ export default function App() {
           maxPolarAngle={Math.PI / 2.1}
         />
       </Canvas>
-      <Cart />
+      <Fragment>
+      <Header />
+      </Fragment>
       <Footer />
       <Router>
         <Navbar />
@@ -73,9 +76,10 @@ export default function App() {
 function Env() {
 
   return <Environment
+  className="App"
     /*files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"*/
     preset="sunset"
     background
     blur={1}
-  />;
+  />
 }
