@@ -100,7 +100,7 @@ export default function Categories() {
         för att erbjuda våra kunder det mest autentiska och unika utbudet. Vårt
         sortiment är uppdelat i olika kategorier för att göra det enklare för
         dig att hitta rätt. Välj mellan storlekar som passar perfekt för att
-        pryda väggen i din hall, vardagsrum eller sovrum. Vi erbjuder också
+        pryda väggen i din hall, vardagsrum eller sovrum. <br/><br/>Vi erbjuder också
         olika tekniker såsom tryck på papper eller canvas för att skapa en unik
         och personlig touch i ditt hem. Gör dig redo att förnya ditt hem med
         våra fantastiska posters och prints!

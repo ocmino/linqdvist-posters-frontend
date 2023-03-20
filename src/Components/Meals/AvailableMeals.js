@@ -30,6 +30,20 @@ const DUMMY_POSTERS = [
     price: 249,
     url: "https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_360x.jpg?v=1574715772",
     },
+    {
+    id: "5",
+    name: "Dalahäst",
+    description: "Poster created in Blender",
+    price: 399,
+    url: "https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546",
+  },
+  {
+    id: "6",
+    name: "City life",
+    description: "Poster created in Blender",
+    price: 399,
+    url: "https://cdn.shopify.com/s/files/1/2469/4477/products/city-life-1_360x.jpg?v=1560613537",
+  },
 
 ];
 

@@ -64,7 +64,7 @@ export default function Home() {
   const styleImg = {
     position: "absolute",
     top: "105%",
-    left: "64%",
+    left: "62%",
     width: "35%",
   };
 
