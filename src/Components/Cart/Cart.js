@@ -35,28 +35,24 @@ const Cart = (props) => {
     </ul>
   );
 
-
   //this array will be used to create the order, to the endpoint
-  const cartItemIds = cartCtx.items.flatMap(item => Array.from({ length: item.amount }, () => item.id));
+  const cartItemIds = cartCtx.items.flatMap((item) =>
+    Array.from({ length: item.amount }, () => item.id)
+  );
   console.log(cartItemIds);
-  
-
-
-
-
 
   return (
     <Modal onClose={props.onClose}>
       {cartitems}
       <div className={styles.total}>
-        <span>Total Amount</span>
+        <span>Total summa</span>
         <span>{totalAmount}</span>
       </div>
       <div className={styles.actions}>
         <button className={styles["button--alt"]} onClick={props.onClose}>
-          Close
+          Stäng
         </button>
-        {hasItems && <button className={styles.button}>Order</button>}
+        {hasItems && <button className={styles.button}>Beställ</button>}
       </div>
     </Modal>
   );

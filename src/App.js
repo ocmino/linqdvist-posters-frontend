@@ -33,8 +33,9 @@ export default function App() {
     setCartIsShown(false);
   };
   return (
+    <div className="App">
     <CardProvider>
-      <div className="App">
+
         <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
           <group position={[0, -0.65, 0]}>
             <AccumulativeShadows
@@ -81,8 +82,9 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Router>
-      </div>
+    
     </CardProvider>
+    </div>
   );
 }
 
