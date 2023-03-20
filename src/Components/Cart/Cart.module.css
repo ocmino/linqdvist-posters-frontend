@@ -4,8 +4,6 @@
     padding: 0;
     max-height: 20rem;
     overflow: auto;
-    z-index: 1;
-
   }
   
   .total {
@@ -15,12 +13,9 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem 0;
-    z-index: 1;
-
   }
   
   .actions {
-    z-index: 1;
     text-align: right;
   }
   
@@ -28,28 +23,24 @@
     font: inherit;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #8a2b06;
+    border: 1px solid #77849b;
     padding: 0.5rem 2rem;
     border-radius: 25px;
-    z-index: 1;
     margin-left: 1rem;
   }
   
   .actions button:hover,
   .actions button:active {
-    background-color: #5a1a01;
-    border-color: #5a1a01;
-    z-index: 1;
+    background-color: #77849b;
+    border-color: #77849b;
     color: white;
   }
   
   .actions .button--alt {
-    z-index: 1;
-    color: #8a2b06;
+    color: #77849b;
   }
   
   .actions .button {
-    background-color: #8a2b06;
-    z-index: 1;
+    background-color: #17275e;
     color: white;
   }
