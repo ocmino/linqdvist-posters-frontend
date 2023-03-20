@@ -87,7 +87,6 @@ export default function Categories() {
     });
   };
 
-
   return (
     <div style={styleContainer}>
       <div style={{ ...styleAbout, color }}>
@@ -95,11 +94,10 @@ export default function Categories() {
       </div>
 
       <p style={{ ...styleText, color }}>
-        Nedan hittar du våra unika posters. Vi har valt ut de bästa och mest unika 
-        posters som vi tror att du kommer att gilla. Vi har valt ut posters som
-        är både vackra och inspirerande. Vi hoppas att du kommer att hitta något
-        som du gillar.
-
+        Nedan hittar du våra unika posters. Vi har valt ut de bästa och mest
+        unika posters som vi tror att du kommer att gilla. Vi har valt ut
+        posters som är både vackra och inspirerande. Vi hoppas att du kommer att
+        hitta något som du gillar.
       </p>
       <button
         onClick={scrollDown}
@@ -115,11 +113,7 @@ export default function Categories() {
       >
         <FiChevronDown />
       </button>
-     <Meals 
-      style={{ ...stylePosters, color }}
-      />
-
-    
+      <Meals />
     </div>
   );
 }

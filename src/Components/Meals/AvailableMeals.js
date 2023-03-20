@@ -34,13 +34,14 @@ const DUMMY_POSTERS = [
 ];
 
 const AvailableMeals = () => {
-  const postersList = DUMMY_POSTERS.map((poster) => (
+  const postersList = DUMMY_POSTERS.map((meal) => (
     <MealItem
-      key={poster.id}
-      name={poster.name}
-      description={poster.description}
-      price={poster.price}
-      url={poster.url}
+      key={meal.id}
+      id={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+      url={meal.url}
     />
   ));
   return (
