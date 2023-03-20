@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@mantine/hooks";
+import Meals from "./Meals/Meals";
 
 export default function Categories() {
   const styleContainer = {
@@ -41,6 +42,18 @@ export default function Categories() {
     gridGap: "50px",
   };
 
+  const styleText = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    color: "white",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    transition: "color 2s linear",
+    padding: "20px",
+  };
+
   // Media query to change the font size
   const isMobile = useMediaQuery("(max-width: 600px)");
   if (isMobile) {
@@ -71,25 +84,17 @@ export default function Categories() {
         <h1>Våra unika posters</h1>
       </div>
 
-      <div style={{ ...stylePosters, color }}>
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_540x.jpg?v=1541006626"
-          alt="poster1"
-          style={{ width: "95%" }}
-        />
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/vinterns-magi-1_540x.jpg?v=1568752238"
-          alt="poster1"
-          style={{ width: "95%" }}
-        />
-        <img
-          src="https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_540x.jpg?v=1574715772"
-          alt="poster1"
-          style={{ width: "95%" }}
-        />
+      <p style={{ ...styleText, color }}>
+        Nedan hittar du våra unika posters. Vi har valt ut de bästa och mest unika 
+        posters som vi tror att du kommer att gilla. Vi har valt ut posters som
+        är både vackra och inspirerande. Vi hoppas att du kommer att hitta något
+        som du gillar.
 
-        </div>
-      
+      </p>
+
+     <Meals 
+      style={{ ...stylePosters, color }}
+      />
 
     
     </div>
