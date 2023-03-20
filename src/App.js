@@ -77,6 +77,5 @@ function Env() {
     preset="sunset"
     background
     blur={1}
-
   />;
 }

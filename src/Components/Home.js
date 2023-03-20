@@ -1,5 +1,6 @@
 import { FiChevronDown } from "react-icons/fi";
 import { useMediaQuery } from "@mantine/hooks";
+import { Environment } from "@react-three/drei";
 export default function Home() {
   //array of background images
   const background = ["./Pictures/HomePage.jpeg", "./Pictures/First.png"];
@@ -9,8 +10,10 @@ export default function Home() {
     position: "absolute",
     top: "0",
     left: "0",
-    width: "100vw",
-    height: "100vh",
+    width: "100%",
+    height: "100%",
+    margin: "0",
+    padding: "0",
   };
 
   //background image
@@ -68,7 +71,7 @@ export default function Home() {
 
   const styleImg = {
     position: "absolute",
-    top: "105%",
+    top: "107%",
     left: "64%",
     width: "35%",
   };
@@ -104,6 +107,7 @@ export default function Home() {
   };
 
   return (
+    
     <div style={styleContainer}>
       <div style={style}>
         <img style={styleImg} src={imgSrc} alt="poster" />
@@ -143,6 +147,7 @@ export default function Home() {
       </div>
 
       <div style={posters}>
+      
         <img
           src="https://cdn.shopify.com/s/files/1/2469/4477/products/dalahast-if-1_360x.jpg?v=1564661546"
           alt="Category 1"
