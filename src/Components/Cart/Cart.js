@@ -39,7 +39,9 @@ const Cart = (props) => {
   const cartItemIds = cartCtx.items.flatMap((item) =>
     Array.from({ length: item.amount }, () => item.id)
   );
-  console.log(cartItemIds);
+  //make cartItemsIds to integer
+  const cartItemIdsInt = cartItemIds.map((x) => parseInt(x, 10));
+  console.log(cartItemIdsInt);
 
   return (
     <Modal onClose={props.onClose}>
