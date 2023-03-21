@@ -17,7 +17,7 @@ const ModalOverlay = (props) => {
 
 const portalElement = document.getElementById('overlays');
 
-const Modal = (props) => {
+const ModalCart = (props) => {
   return (
     <Fragment>
       {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElement)}
@@ -29,4 +29,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default ModalCart;
