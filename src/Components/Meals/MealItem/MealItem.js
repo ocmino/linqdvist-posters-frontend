@@ -13,11 +13,9 @@ const MealItem = (props) => {
       name: props.name,
       amount: amount,
       price: props.price,
+      modelviewer: props.modelviewer,
     });
   };
-
-  
-
 
   return (
     <li className={classes.meal}>
