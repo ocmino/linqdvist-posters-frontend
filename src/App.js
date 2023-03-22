@@ -1,5 +1,4 @@
-import { Fragment, useState, useTransition } from "react";
-import { useControls } from "leva";
+import {  useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   AccumulativeShadows,

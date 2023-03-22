@@ -1,6 +1,6 @@
-import { FiChevronDown } from "react-icons/fi";
+
 import { useMediaQuery } from "@mantine/hooks";
-import { Environment } from "@react-three/drei";
+
 export default function Home() {
   //array of background images
   const background = ["./Pictures/HomePage.jpeg", "./Pictures/First.png"];

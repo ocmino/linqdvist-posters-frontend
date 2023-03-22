@@ -16,7 +16,8 @@ export const DUMMY_POSTERS = [
     description: "Poster created in Blender",
     price: 399,
     url: "https://cdn.shopify.com/s/files/1/2469/4477/products/vinterns-magi-1_360x.jpg?v=1568752238",
-    modelviewer: "https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
+    modelviewer:
+      "https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
   },
   {
     id: "3",
@@ -26,15 +27,15 @@ export const DUMMY_POSTERS = [
     url: "https://cdn.shopify.com/s/files/1/2469/4477/products/the-mountain-1_360x.jpg?v=1541006626",
     modelviewer: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
   },
-    {   
+  {
     id: "4",
     name: "Imagination",
     description: "Poster created in Blender",
     price: 249,
     url: "https://cdn.shopify.com/s/files/1/2469/4477/products/imagination-loa-1_360x.jpg?v=1574715772",
     modelviewer: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-    },
-    {
+  },
+  {
     id: "5",
     name: "Dalahäst",
     description: "Poster created in Blender",
@@ -43,16 +44,14 @@ export const DUMMY_POSTERS = [
     modelviewer: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
   },
   {
-    id: "6",  
+    id: "6",
     name: "City life",
     description: "Poster created in Blender",
     price: 399,
     url: "https://cdn.shopify.com/s/files/1/2469/4477/products/city-life-1_360x.jpg?v=1560613537",
     modelviewer: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
   },
-
 ];
-
 
 const AvailableMeals = () => {
   const postersList = DUMMY_POSTERS.map((meal) => (
@@ -68,9 +67,7 @@ const AvailableMeals = () => {
   ));
   return (
     <section className={classes.meals}>
-      <ul>
-        {postersList}
-      </ul>
+      <ul>{postersList}</ul>
     </section>
   );
 };

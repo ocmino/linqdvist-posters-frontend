@@ -4,7 +4,7 @@ import { useContext } from "react";
 import CartContext from "../../Store/cart-context";
 import CartItem from "./CartItem";
 import { useDisclosure } from "@mantine/hooks";
-import { Modal, Button, Group } from "@mantine/core";
+import { Modal } from "@mantine/core";
 import { useState } from "react";
 
 const Cart = (props) => {
