@@ -3,10 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import {
   AccumulativeShadows,
   RandomizedLight,
-  Center,
   Environment,
   OrbitControls,
-  Sky,
 } from "@react-three/drei";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
