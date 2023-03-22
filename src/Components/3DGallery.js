@@ -192,7 +192,11 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
     <group {...props}>
       <mesh
         name={name}
-        onPointerOver={(e) => (e.stopPropagation(), hover(true))}
+        onPointerOver={(e) => {
+          e.stopPropagation();
+          hover(true);
+        }}
+        
         onPointerOut={() => hover(false)}
         scale={[1, GOLDENRATIO, 0.05]}
         position={[0, GOLDENRATIO / 2, 0]}
