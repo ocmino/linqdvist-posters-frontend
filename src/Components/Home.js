@@ -96,6 +96,7 @@ export default function Home() {
 
       <div style={styleText}>
         <h2>Gör ditt hem mer personligt</h2>
+        <br/>
         <p>
           Utforska vårt fantastiska utbud av unika posters och prints, skapade
           av talangfulla 3D-grafiker för att ge dina väggar en modern och unik
