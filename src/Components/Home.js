@@ -23,8 +23,8 @@ export default function Home() {
     fontWeight: "bold",
     transition: "color 2s linear",
     padding: "20px",
-    width: "50%",
-    height: "50%",
+    width: "45%",
+    height: "45%",
     borderRadius: "10px",
     backgroundImage: `url(${background[0]})`,
     backgroundSize: "cover",
@@ -35,7 +35,7 @@ export default function Home() {
 
   const styleText = {
     position: "absolute",
-    top: "82%",
+    top: "79%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     fontSize: "1rem",
@@ -98,17 +98,21 @@ export default function Home() {
       <div style={styleText}>
         <h2>Gör ditt hem mer personligt</h2>
         <p>
-          Upptäck vårt spännande utbud av vackra och unika posters och prints
-          som du garanterat inte hittar någon annanstans. Du som uppskattar att
-          vara ensam om dina inredningsdetaljer och vill stödja nordiska
-          designers har hittat helt rätt. Passa på att pryda flera väggar åt
-          gången och skapa ett härligt hem fyllt med snygga posters och
-          affischer. I vårt härliga utbud hittar du något för alla väggar i
-          hemmet. Du kan se alla motiv utifrån kategori, teknik eller storlek
-          vilket underlättar att hitta posters i just din stil.
+          Utforska vårt fantastiska utbud av digitala posters och prints,
+          skapade av talangfulla 3D-grafiker för att ge dina väggar en modern
+          och unik touch. Vår samling av posters är helt digital och skapas från scratch i
+          3D-program som Blender och Maya. Varför
+          inte skapa en samling av olika motiv och kategorier för att ge ditt
+          hem en personlig touch? Från abstrakta konstverk till realistiska
+          landskap, vår samling har något som passar just din stil och
+          personlighet. Utforska vår samling baserat på storlek, teknik eller
+          kategori och hitta din favorit idag. <br/><br/>Vi tror på att stödja och lyfta
+          fram datorgrafiker och vi är stolta över att erbjuda ett utbud av
+          digitala posters som är både vackra och unika. Ge dina väggar liv med
+          våra digitala posters och skapa en inredning som du kommer att älska i
+          åratal framöver.
         </p>
       </div>
-   
     </div>
   );
 }

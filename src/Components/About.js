@@ -44,8 +44,6 @@ export default function About() {
     styleText.top = "50%";
   }
 
-
-
   // Color state and interval timer to update the color
   const [color, setColor] = useState("black");
   useEffect(() => {
@@ -62,23 +60,28 @@ export default function About() {
       </div>
 
       <p style={{ ...styleText, color }}>
-        Hos oss på LINDQVIST Posters kan du köpa posters online från
-        många olika formgivare, så att du kan hitta något som passar ditt hem,
-        oavsett stil och smak. Här möter du nordisk konst från fantastiska
-        konstnärer, fotografer, illustratörer och designers - allt från
-        affischer med naturmotiv, posters med växter och blommor, djur,
-        insekter, kökstavlor eller inspirerande citat. Du kan med ny spännande
-        konst på väggarna förändra hela känslan av ditt hem. <br/><br/>Det är en
-        inredningsdetalj som på ett enkelt sätt låter dig förmedla din
-        personlighet och stil. Tavlor, posters, affischer, prints, planscher -
-        kärt barn har många namn! Här hittar du våra senaste nyheter från våra
-        formgivare.
-        <img style={{
-          position: "absolute",
-          top: "110%",
-          left: "50%",
-          width: "40%",
-        }} src="/Pictures/signature.png" alt="poster" />
+        Här på LINDQVIST Posters har vi ett brett utbud av posters online från
+        många olika formgivare, vilket innebär att oavsett din stil eller smak
+        så kan du hitta något som passar perfekt i ditt hem. Vi erbjuder unik
+        konst från fantastiska 3D-grafiker och konstnärer - allt från naturliga motiv som natur och växter till djur,
+        insekter, kökstavlor och inspirerande citat. Genom att lägga till en ny
+        och spännande konst på dina väggar kan du förändra hela känslan av ditt
+        hem på ett enkelt sätt. <br/><br/>Att välja tavlor, posters, affischer, prints
+        eller planscher är en inredningsdetalj som låter dig förmedla din
+        personlighet och stil på ett unikt sätt. Vi vet att kärt barn har många
+        namn, men oavsett vad du kallar det så hittar du det här hos oss.
+        Utforska vårt senaste urval från våra formgivare och upptäck det
+        perfekta tillskottet till ditt hem. formgivare.
+        <img
+          style={{
+            position: "absolute",
+            top: "110%",
+            left: "50%",
+            width: "40%",
+          }}
+          src="/Pictures/signature.png"
+          alt="poster"
+        />
       </p>
     </div>
   );

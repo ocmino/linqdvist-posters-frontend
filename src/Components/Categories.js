@@ -96,7 +96,7 @@ export default function Categories() {
       <p style={{ ...styleText, color }}>
         Nedan hittar du våra unika posters och prints som är tillgängliga för
         köp. Här kan du hitta allt från färgglada grafiska prints till mer
-        minimalistiska fotografier. Vi samarbetar endast med nordiska designers
+        minimalistiska fotografier. Vi samarbetar endast med 3D-grafiker
         för att erbjuda våra kunder det mest autentiska och unika utbudet. Vårt
         sortiment är uppdelat i olika kategorier för att göra det enklare för
         dig att hitta rätt. Välj mellan storlekar som passar perfekt för att
