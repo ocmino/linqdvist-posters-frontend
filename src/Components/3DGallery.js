@@ -141,15 +141,16 @@ function Frames({
     easing.damp3(state.camera.position, p, 0.4, dt);
     easing.dampQ(state.camera.quaternion, q, 0.4, dt);
   });
+  
   return (
     <group
       ref={ref}
-      onClick={(e) => (
-        e.stopPropagation(),
+      onClick={(e) => {
+        e.stopPropagation();
         setLocation(
           clicked.current === e.object ? "/" : "/item/" + e.object.name
-        )
-      )}
+        );
+      }}
       onPointerMissed={() => setLocation("/")}
     >
       {images.map(
