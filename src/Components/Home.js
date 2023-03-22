@@ -1,4 +1,3 @@
-
 import { useMediaQuery } from "@mantine/hooks";
 
 export default function Home() {
@@ -15,7 +14,7 @@ export default function Home() {
   //background image
   const style = {
     position: "absolute",
-    top: "37.5%",
+    top: "36%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: "black",
@@ -98,19 +97,15 @@ export default function Home() {
       <div style={styleText}>
         <h2>Gör ditt hem mer personligt</h2>
         <p>
-          Utforska vårt fantastiska utbud av digitala posters och prints,
-          skapade av talangfulla 3D-grafiker för att ge dina väggar en modern
-          och unik touch. Vår samling av posters är helt digital och skapas från scratch i
-          3D-program som Blender och Maya. Varför
-          inte skapa en samling av olika motiv och kategorier för att ge ditt
-          hem en personlig touch? Från abstrakta konstverk till realistiska
-          landskap, vår samling har något som passar just din stil och
-          personlighet. Utforska vår samling baserat på storlek, teknik eller
-          kategori och hitta din favorit idag. <br/><br/>Vi tror på att stödja och lyfta
-          fram datorgrafiker och vi är stolta över att erbjuda ett utbud av
-          digitala posters som är både vackra och unika. Ge dina väggar liv med
-          våra digitala posters och skapa en inredning som du kommer att älska i
-          åratal framöver.
+          Utforska vårt fantastiska utbud av unika posters och prints, skapade
+          av talangfulla 3D-grafiker för att ge dina väggar en modern och unik
+          touch. Varför inte skapa en samling av olika motiv och kategorier för
+          att ge ditt hem en personlig touch? Från abstrakta konstverk till
+          realistiska landskap, vår samling har något som passar just din stil
+          och personlighet. Utforska vår samling baserat på storlek, teknik
+          eller kategori och hitta din favorit idag.
+          Ge dina väggar liv med våra digitala posters och skapa en
+          inredning som du kommer att älska i åratal framöver.
         </p>
       </div>
     </div>
