@@ -23,6 +23,18 @@ const Cart = (props) => {
   const cartItemAddHandler = (item) => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
+  const styleForm = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: "1000px",
+    margin: "0 auto",
+    padding: "30px",
+    background: "#77849b",
+    borderRadius: "5px",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+  };
 
   const cartitems = (
     <ul className={styles["cart-items"]}>
@@ -97,8 +109,8 @@ const Cart = (props) => {
         </div>
       </ModalCart>
 
-      <Modal opened={opened} onClose={close}>
-        <form onSubmit={handleSubmit}>
+      <Modal opened={opened} onClose={close} fullScreen>
+        <form onSubmit={handleSubmit} style={styleForm}>
           <label>
             Customer Name:
             <input

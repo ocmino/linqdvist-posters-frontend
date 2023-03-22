@@ -7,7 +7,7 @@ export default function Home() {
 
   //container
   const styleContainer = {
-    position: "absolute",
+    position: "fixed",
     width: "100vw",
     height: "100vh",
   };
