@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   AccumulativeShadows,
@@ -18,6 +18,8 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Layout/Header";
 import Cart from "./Components/Cart/Cart";
 import CardProvider from "./Store/CartProvider";
+import { useControls } from "leva";
+import { Center } from "@react-three/drei";
 
 export default function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -31,8 +33,7 @@ export default function App() {
   };
   return (
     <div className="App">
-    <CardProvider>
-
+      <CardProvider>
         <Canvas shadows camera={{ position: [0, 0, 4.5], fov: 50 }}>
           <group position={[0, -0.65, 0]}>
             <AccumulativeShadows
@@ -79,8 +80,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Router>
-    
-    </CardProvider>
+      </CardProvider>
     </div>
   );
 }

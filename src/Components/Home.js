@@ -34,7 +34,7 @@ export default function Home() {
 
   const styleText = {
     position: "absolute",
-    top: "79%",
+    top: "75%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     fontSize: "1rem",
@@ -62,7 +62,7 @@ export default function Home() {
 
   const styleImg = {
     position: "absolute",
-    top: "105%",
+    top: "6.5%",
     left: "62%",
     width: "35%",
   };
@@ -91,11 +91,11 @@ export default function Home() {
   return (
     <div style={styleContainer}>
       <div style={style}>
-        <img style={styleImg} src={imgSrc} alt="poster" />
+        
       </div>
 
       <div style={styleText}>
-        <h2>Gör ditt hem mer personligt</h2>
+        <h2>Gör ditt hem mer personligt</h2> <img style={styleImg} src={imgSrc} alt="poster" />
         <br/>
         <p>
           Utforska vårt fantastiska utbud av unika posters och prints, skapade
