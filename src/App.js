@@ -89,8 +89,8 @@ function Env() {
   return (
     <Environment
       className="App"
-      /*files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"*/
-      preset="sunset"
+      files="/Pictures/HDR/snow_field_2_puresky_2k.hdr"
+  
       background
       blur={1}
     />
